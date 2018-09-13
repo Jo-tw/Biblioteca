@@ -4,17 +4,30 @@ import java.util.List;
 public class BookShelf {
     List<Book> books = new ArrayList();
 
-    public List<Book> getBooks() {
+     List<Book> getBooks() {
         return books;
     }
 
-    public void setBooks(List<Book> books) {
+    void setBooks(List<Book> books) {
         this.books = books;
     }
 
 
-    public void addBook(Book b1) {
+     void addBook(Book b1) {
         this.books.add(b1);
+    }
+
+    void rmBook(Book b1) {
+        this.books.remove(b1);
+    }
+
+    void printBooks() {
+        for(Book b : books){
+            System.out.println(b.getName());
+            System.out.println(b.getAuthor());
+            System.out.println(b.getYear());
+
+        }
     }
 
 }
